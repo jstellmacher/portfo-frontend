@@ -1,13 +1,14 @@
-import { useState } from 'react'
+import { useState } from "react";
 // // import reactLogo from './assets/react.svg'
 // // import viteLogo from '/vite.svg'
-import './App.css'
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MainLayout from './components/MainLayout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
+// import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainLayout from "./components/MainLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import "./styles.css";
 
 function App() {
   return (
