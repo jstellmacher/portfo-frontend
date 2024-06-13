@@ -1,24 +1,24 @@
-import { useState } from "react";
-// // import reactLogo from './assets/react.svg'
-// // import viteLogo from '/vite.svg'
-// import './App.css'
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MainLayout from "./components/MainLayout";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import "./styles.css";
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainLayout from './components/MainLayout';
+import PortfolioCard from './components/PortfolioCard';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import './styles.css';
 
 function App() {
   return (
     <Router>
       <MainLayout>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-        </Switch>
+        <PortfolioCard>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </PortfolioCard>
       </MainLayout>
     </Router>
   );
