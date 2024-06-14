@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => {
         <Header />
         <div className="flex flex-grow"> {/* Container for both the Nav and the main content */}
           <Nav /> {/* Include the Nav component */}
-          <div className="flex-grow p-4"> {/* Adjusted main container */}
+          <div className="flex-grow p-4 overflow-auto"> {/* Adjusted main container with overflow-auto */}
             {children}
           </div>
         </div>

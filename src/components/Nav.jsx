@@ -15,6 +15,9 @@ const Nav = () => {
         <li>
           <Link to="/projects" className="hover:bg-blue-500 px-3 py-2 rounded">Projects</Link>
         </li>
+        <li>
+            <Link to="/blog" className="hover:bg-blue-500 px-3 py-2 rounded">Blog</Link>
+        </li>
       </ul>
     </nav>
   );
