@@ -2,13 +2,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainLayout from "./components/MainLayout";
+import BlogLayout from "./components/BlogLayout";
 import PortfolioCard from "./components/PortfolioCard";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import "./styles.css";
-import BlogLayout from "./components/BlogLayout";
 
 function App() {
   return (

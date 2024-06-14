@@ -1,7 +1,6 @@
-// Blog.jsx
 import React, { useState, useEffect } from 'react';
-import MyCarousel from '../components/Carousel'; // Adjust path as per your file structure
-import { fetchBlogPosts } from '../components/BlogAPI'; // Adjust path as per your file structure
+import Carousel from '../components/Carousel';
+import { fetchBlogPosts } from '../components/BlogAPI';
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -12,6 +11,7 @@ const Blog = () => {
     const fetchData = async () => {
       try {
         const data = await fetchBlogPosts();
+        console.log('Fetched blog posts:', data); // Check the structure of data
         setBlogPosts(data);
         setLoading(false);
       } catch (error) {
@@ -19,7 +19,7 @@ const Blog = () => {
         setLoading(false);
       }
     };
-
+  
     fetchData();
   }, []);
 
@@ -35,7 +35,7 @@ const Blog = () => {
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-4">Blog</h1>
       {blogPosts.length > 0 ? (
-        <MyCarousel items={blogPosts} />
+        <Carousel items={blogPosts} />
       ) : (
         <p>No blog posts found.</p>
       )}
