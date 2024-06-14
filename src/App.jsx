@@ -6,22 +6,18 @@ import PortfolioCard from "./components/PortfolioCard";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-// import Blog from "./pages/Blog";
+import Blog from "./pages/Blog";
 import "./styles.css";
 
 function App() {
   return (
     <Router>
-      <MainLayout>
-        <PortfolioCard>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            {/* <Route path="/Blog" element={<Blog />} /> */}
-          </Routes>
-        </PortfolioCard>
-      </MainLayout>
+      <Routes>
+        <Route path="/" element={<MainLayout><PortfolioCard><Home /></PortfolioCard></MainLayout>} />
+        <Route path="/about" element={<MainLayout><PortfolioCard><About /></PortfolioCard></MainLayout>} />
+        <Route path="/projects" element={<MainLayout><PortfolioCard><Projects /></PortfolioCard></MainLayout>} />
+        <Route path="/blog" element={<MainLayout><Blog /></MainLayout>} />
+      </Routes>
     </Router>
   );
 }
