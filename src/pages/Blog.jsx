@@ -1,3 +1,4 @@
+// Blog.jsx
 import React, { useState, useEffect } from 'react';
 import MyCarousel from '../components/Carousel'; // Adjust path as per your file structure
 import { fetchBlogPosts } from '../components/BlogAPI'; // Adjust path as per your file structure

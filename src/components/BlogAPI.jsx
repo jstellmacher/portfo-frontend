@@ -1,4 +1,4 @@
-// BlogService.jsx (or BlogAPI.jsx)
+// BlogAPI.jsx (or BlogService.jsx)
 const dummyData = [
     { id: 1, title: 'First Blog Post', date: 'June 1, 2024', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
     { id: 2, title: 'Second Blog Post', date: 'June 5, 2024', description: 'Nulla quis lorem ut libero malesuada feugiat.' },

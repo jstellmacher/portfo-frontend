@@ -1,3 +1,4 @@
+// BlogPost.jsx
 import React from 'react';
 
 const BlogPost = ({ title, date, description }) => {
