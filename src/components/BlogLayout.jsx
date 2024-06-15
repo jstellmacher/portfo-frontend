@@ -1,13 +1,15 @@
-import React from 'react';
+// BlogLayout.jsx
+import React from "react";
 
-const BlogLayout = ({ children }) => {
+const BlogLayout = ({ title, children }) => {
   return (
-    <div className="bg-red-500 rounded-lg shadow-lg p-6 transform transition-transform duration-500 max-w-screen-md h-5/6 mx-auto">
-      <div className="blog-content">
+    <div className="container mx-auto py-8 bg-green-400">
+      <h1 className="text-3xl font-bold mb-4 bg-red-100">{title}</h1>
+      <div className="bg-white rounded-lg shadow-lg p-6 bg-blue-700">
         {children}
       </div>
     </div>
   );
-}
+};
 
 export default BlogLayout;

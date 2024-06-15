@@ -14,6 +14,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Define routes with nested layout components */}
         <Route path="/" element={<MainLayout><PortfolioCard><Home /></PortfolioCard></MainLayout>} />
         <Route path="/about" element={<MainLayout><PortfolioCard><About /></PortfolioCard></MainLayout>} />
         <Route path="/projects" element={<MainLayout><PortfolioCard><Projects /></PortfolioCard></MainLayout>} />

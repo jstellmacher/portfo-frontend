@@ -1,5 +1,7 @@
+// Blog.jsx
 import React, { useState, useEffect } from 'react';
-import Carousel from '../components/Carousel';
+import BlogLayout from '../components/BlogLayout';
+import BlogPost from '../components/BlogPost';
 import { fetchBlogPosts } from '../components/BlogAPI';
 
 const Blog = () => {
@@ -11,15 +13,16 @@ const Blog = () => {
     const fetchData = async () => {
       try {
         const data = await fetchBlogPosts();
-        console.log('Fetched blog posts:', data); // Check the structure of data
+        console.log('Fetched blog posts:', data);
         setBlogPosts(data);
         setLoading(false);
       } catch (error) {
+        console.error('Error fetching blog posts:', error);
         setError('Failed to fetch blog posts');
         setLoading(false);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -32,14 +35,20 @@ const Blog = () => {
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-4">Blog</h1>
-      {blogPosts.length > 0 ? (
-        <Carousel items={blogPosts} />
-      ) : (
-        <p>No blog posts found.</p>
-      )}
-    </div>
+      <BlogLayout title="Blog">
+        {blogPosts.length > 0 ? (
+          blogPosts.map((post) => (
+            <BlogPost
+              key={post.id}
+              title={post.title}
+              date={post.date}
+              description={post.description}
+            />
+          ))
+        ) : (
+          <p>No blog posts found.</p>
+        )}
+      </BlogLayout>
   );
 };
 
