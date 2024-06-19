@@ -1,11 +1,11 @@
 // BlogLayout.jsx
-import React from "react";
+import React from 'react';
 
 const BlogLayout = ({ title, children }) => {
   return (
-    <div className="container mx-auto py-8 bg-green-400">
-      <h1 className="text-3xl font-bold mb-4 bg-red-100">{title}</h1>
-      <div className="bg-white rounded-lg shadow-lg p-6 bg-blue-700">
+    <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg bg-gray-100 rounded-lg">
+      <h1 className="text-3xl font-bold mb-6 text-gray-900">{title}</h1>
+      <div className="space-y-8">
         {children}
       </div>
     </div>
