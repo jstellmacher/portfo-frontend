@@ -6,14 +6,18 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false); // Default to false for non-admin
 
-  const login = () => {
-    // Implement your login logic here
-    setIsAdmin(true); // Example: Set isAdmin to true upon successful login
+  const login = (username, password) => {
+    // Check if the username and password match your criteria
+    if (username === 'Jai' && password === 'sushi1998') {
+      setIsAdmin(true); // Set isAdmin to true upon successful login
+    } else {
+      setIsAdmin(false); // Set isAdmin to false if credentials are incorrect
+      throw new Error('Invalid username or password');
+    }
   };
 
   const logout = () => {
-    // Implement your logout logic here
-    setIsAdmin(false); // Example: Set isAdmin to false upon logout
+    setIsAdmin(false); // Set isAdmin to false upon logout
   };
 
   return (
