@@ -1,7 +1,7 @@
+// AboutMe.jsx
 import React from 'react';
 import ProfilePicture from '../components/ProfilePicture';
 import Subnavigation from '../components/AboutMeSubnavigation'; // New component for subnavigation
-import PageIndex from '../components/PageIndex'; // New component for page index
 
 const AboutMe = () => {
   const imageUrl = "https://picsum.photos/200"; // Replace with your profile picture URL or state if necessary
@@ -29,14 +29,6 @@ const AboutMe = () => {
     'Skills': ['Coding', 'Data Analysis', 'Project Management']
   };
 
-  // Function to scroll to a specific element based on ID
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // State to manage active subsection
   const [activeInterest, setActiveInterest] = React.useState('Songs'); // Default to 'Songs' interest
 
@@ -44,11 +36,11 @@ const AboutMe = () => {
     <div className="mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg">
       <ProfilePicture imageUrl={imageUrl} alt="Profile Picture" />
       <div className="mt-8">
-        <h2 id="about-me" className="text-3xl font-bold mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold mb-4">About Me</h2>
         <p className="text-lg mb-4">
           Hi there! I'm Jaichuang Stellmacher, a passionate IT Solutions Analyst with a knack for transforming complex challenges into streamlined solutions. My journey began with a deep fascination for technology's transformative power, leading me from a dual major in MIS & Marketing to becoming a certified Full Stack Software Engineer.
         </p>
-        <h3 id="interests" className="text-xl font-semibold mb-2">
+        <h3 className="text-xl font-semibold mb-2">
           Interests
         </h3>
         {/* Subnavigation for different sections */}
@@ -57,7 +49,7 @@ const AboutMe = () => {
         </div>
 
         {/* Showcase of interests */}
-        <div id="active-interest-examples" className="mt-8">
+        <div className="mt-8">
           <h3 className="text-xl font-semibold mb-2">{activeInterest} Examples</h3>
           <ul className="flex flex-wrap gap-2">
             {interestExamples[activeInterest].map((example, index) => (
@@ -69,7 +61,7 @@ const AboutMe = () => {
         </div>
 
         {/* Featured Tableau Visualization */}
-        <div id="tableau-visualization" className="mt-8">
+        <div className="mt-8">
           <h3 className="text-xl font-semibold mb-2">Featured Tableau Visualization</h3>
           {/* Tableau embed iframe */}
           <iframe
@@ -83,14 +75,14 @@ const AboutMe = () => {
         </div>
 
         {/* Career Highlights */}
-        <div id="career-highlights" className="mt-8">
+        <div className="mt-8">
           <h3 className="text-xl font-semibold mb-2">Career Highlights</h3>
           <p className="mb-2">Led a cross-functional team in implementing a cloud-based data governance solution, enhancing data accuracy and compliance for clients.</p>
           <p>Collaborated on a high-profile Cisco collaboration upgrade project, ensuring seamless integration and client satisfaction.</p>
         </div>
 
         {/* My Approach */}
-        <div id="my-approach" className="mt-8">
+        <div className="mt-8">
           <h3 className="text-xl font-semibold mb-2">My Approach</h3>
           <ul className="list-disc pl-6">
             <li>Passionate about leveraging technology to drive business outcomes.</li>
@@ -100,14 +92,10 @@ const AboutMe = () => {
         </div>
 
         {/* Contact Information */}
-        <div id="contact-information" className="mt-8">
+        <div className="mt-8">
           <p>Interested in discussing technology solutions or exploring potential collaborations? Let's connect on <a href="https://www.linkedin.com/in/jaichuang-stellmacher" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">LinkedIn</a>.</p>
           <p>For inquiries, feel free to reach out via email at <a href="mailto:jaichuang.stellmacher@example.com" className="text-blue-500 hover:underline">jaijai.stell@gmail.com</a>.</p>
         </div>
-
-        {/* Index for the page */}
-        <PageIndex scrollToSection={scrollToSection} />
-        
       </div>
     </div>
   );
