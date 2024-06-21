@@ -53,6 +53,9 @@ const Nav = () => {
         <li>
           <Link to="/blog" className="hover:bg-blue-500 px-3 py-2 rounded">Blog</Link>
         </li>
+        <li>
+          <Link to="/contact" className="hover:bg-blue-500 px-3 py-2 rounded">Contact</Link>
+        </li>
         {/* Conditional rendering based on isAdmin state */}
         {isAdmin ? (
           <li>
