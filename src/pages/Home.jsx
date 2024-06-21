@@ -9,15 +9,16 @@ import CertificationsCard from '../components/CertificationsCard';
 import TechnicalSkillsCard from '../components/TechnicalSkillsCard';
 import EducationCard from '../components/EducationCard'; // Import correct component
 
-  const Home = () => {
-    const { isAdmin } = useAuth();
+const Home = () => {
+  const { isAdmin } = useAuth();
 
-    const [imageUrl, setImageUrl] = useState("/lol_Jai_dumb.png"); // Use the local image
+  const [imageUrl, setImageUrl] = useState("/lol_Jai_dumb.png"); // Use the local image
 
-    const handleFileSelect = (file) => {
-      const url = URL.createObjectURL(file);
-      setImageUrl(url);
-    };
+  const handleFileSelect = (file) => {
+    const url = URL.createObjectURL(file);
+    setImageUrl(url);
+  };
+
   // State to manage active section
   const [activeSection, setActiveSection] = useState('keyQualifications'); // Default to 'keyQualifications' section
 
