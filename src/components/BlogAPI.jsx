@@ -5,7 +5,7 @@ const dummyData = [
     title: "First Blog Post",
     date: "June 1, 2024",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imageUrl: "https://picsum.photos/seed/picsum/200/300",
+    imageUrl: "https://picsum.photos/seed/picsum/200/500",
     featured: true,
   },
   {
@@ -13,7 +13,7 @@ const dummyData = [
     title: "Second Blog Post",
     date: "June 5, 2024",
     description: "Nulla quis lorem ut libero malesuada feugiat.",
-    imageUrl: "https://picsum.photos/seed/picsum/200/300",
+    imageUrl: "https://picsum.photos/seed/picsum/200/400",
     featured: false,
   },
   {
@@ -21,7 +21,7 @@ const dummyData = [
     title: "Third Blog Post",
     date: "June 10, 2024",
     description: "Vestibulum ac diam sit amet quam vehicula elementum.",
-    imageUrl: "https://picsum.photos/200/300",
+    imageUrl: "https://picsum.photos/200/800",
     featured: false,
   },
   {

@@ -1,4 +1,6 @@
 // Header.jsx
+
+//Not being used due to side NAV
 import React from 'react';
 
 const Header = () => {

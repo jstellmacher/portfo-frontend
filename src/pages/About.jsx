@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProfilePicture from '../components/ProfilePicture';
 import Subnavigation from '../components/AboutMeSubnavigation'; // New component for subnavigation
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa'; // Import icons
 
 const AboutMe = () => {
-  const imageUrl = "https://picsum.photos/200"; // Replace with your profile picture URL or state if necessary
+  const [imageUrl, setImageUrl] = useState("/lol_Jai_dumb.png"); // Use the local image
+
+  const handleFileSelect = (file) => {
+    const url = URL.createObjectURL(file);
+    setImageUrl(url);
+  };
 
   // Tableau embed URL (replace with your Tableau visualization embed URL)
   const tableauEmbedUrl = "https://public.tableau.com/views/YourVisualization";

@@ -9,10 +9,15 @@ import CertificationsCard from '../components/CertificationsCard';
 import TechnicalSkillsCard from '../components/TechnicalSkillsCard';
 import EducationCard from '../components/EducationCard'; // Import correct component
 
-const Home = () => {
-  const { isAdmin } = useAuth();
-  const imageUrl = "https://picsum.photos/200"; // Replace with your default image URL or state if necessary
+  const Home = () => {
+    const { isAdmin } = useAuth();
 
+    const [imageUrl, setImageUrl] = useState("/lol_Jai_dumb.png"); // Use the local image
+
+    const handleFileSelect = (file) => {
+      const url = URL.createObjectURL(file);
+      setImageUrl(url);
+    };
   // State to manage active section
   const [activeSection, setActiveSection] = useState('keyQualifications'); // Default to 'keyQualifications' section
 
