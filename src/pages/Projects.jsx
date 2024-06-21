@@ -91,7 +91,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg">
-      <h2 className="text-3xl font-bold mb-8 text-white">Projects</h2>
+      <h2 className="text-3xl font-bold mb-8 text-black">Projects</h2>
       <Filter tags={allTags} selectedTags={selectedTags} onTagClick={handleTagClick} />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (

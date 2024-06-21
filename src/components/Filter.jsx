@@ -4,7 +4,7 @@ import React from 'react';
 const Filter = ({ tags, selectedTags, onTagClick }) => {
   return (
     <div className="mb-8">
-      <h3 className="text-xl font-semibold mb-4 text-white">Filter by Tags</h3>
+      <h3 className="text-xl font-semibold mb-4 text-black">Filter by Tags</h3>
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
           <button
