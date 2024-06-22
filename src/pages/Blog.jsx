@@ -83,7 +83,9 @@ const Blog = () => {
 
         <div>
           <h2 className="text-2xl font-bold mb-4 text-gray-900">Recent Posts</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <p className="text-red-600 text-sm text-center m-2">
+        Scroll Down For More Blogs</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-auto max-h-[60vh] rounded-lg">
             {filterPosts(activeTag).filter(post => !post.featured).map(post => (
               <RegularBlogPost
                 key={post.id}

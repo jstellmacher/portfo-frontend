@@ -114,9 +114,10 @@ const ProjectsPage = () => {
         onTagClick={handleTagClick}
         onClearTags={handleClearTags} // Pass handleClearTags function
       />
-<p className="text-red-600 text-sm text-center m-2">
+      <p className="text-red-600 text-sm text-center m-2">
         Scroll Down For More Projects
-      </p>      <div className="overflow-y-auto max-h-[60vh] rounded-lg">
+      </p>
+      <div className="overflow-y-auto max-h-[60vh] rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <ProjectCard
