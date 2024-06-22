@@ -2,7 +2,7 @@
 import React from 'react';
 
 const MyApproach = () => (
-  <div id="my-approach" className="mt-12 bg-gray-200 p-4 rounded-lg shadow-md mb-8">
+  <div id="my-approach" className="mt-12 bg-blue-200 p-4 rounded-lg shadow-md mb-8">
     <h3 className="text-xl font-semibold mb-4">My Approach</h3>
     <ul className="list-disc pl-6 space-y-2">
       <li>Passionate about leveraging technology to drive business outcomes.</li>
