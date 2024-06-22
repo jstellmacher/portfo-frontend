@@ -3,12 +3,14 @@ import React, { useState, useEffect } from 'react';
 import BlogLayout from '../components/BlogLayout';
 import FeaturedBlogPost from '../components/FeaturedBlogPost';
 import RegularBlogPost from '../components/RegularBlogPost';
+import BlogFilter from '../components/BlogFilter';
 import { fetchBlogPosts } from '../components/BlogAPI';
 
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [activeTag, setActiveTag] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,16 +37,38 @@ const Blog = () => {
     return <div className="container mx-auto py-8">Error: {error}</div>;
   }
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const tags = [
+    'coding',
+    'project management',
+    'marketing',
+    'ux/ui',
+    'web development',
+    'python',
+    'javascript',
+    'java',
+  ];
+
+  const filterPosts = tag => {
+    if (!tag) {
+      return blogPosts;
+    }
+    return blogPosts.filter(post => post.tags.includes(tag));
+  };
 
   return (
     <div className="bg-gray-100 rounded-lg min-h-[80vh]">
       <BlogLayout title="Blog">
+        <BlogFilter
+          tags={tags}
+          activeTag={activeTag}
+          setActiveTag={setActiveTag}
+          filterPosts={filterPosts}
+        />
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">Featured Posts</h2>
           <div className="grid grid-cols-1 gap-6">
-            {featuredPosts.map(post => (
+            {filterPosts(activeTag).filter(post => post.featured).map(post => (
               <FeaturedBlogPost
                 key={post.id}
                 title={post.title}
@@ -56,10 +80,11 @@ const Blog = () => {
             ))}
           </div>
         </div>
+
         <div>
           <h2 className="text-2xl font-bold mb-4 text-gray-900">Recent Posts</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {regularPosts.map(post => (
+            {filterPosts(activeTag).filter(post => !post.featured).map(post => (
               <RegularBlogPost
                 key={post.id}
                 title={post.title}

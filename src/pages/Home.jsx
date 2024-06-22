@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ProfilePicture from '../components/ProfilePicture';
 import { useAuth } from '../components/AuthContext';
-import Subnavigation from '../components/Subnavigation';
+import Subnavigation from '../components/HomeSubnavigation';
 import KeyQualificationsCard from '../components/KeyQualificationsCard';
 import ProfessionalExperienceCard from '../components/ProfessionalExperienceCard';
 import CertificationsCard from '../components/CertificationsCard';

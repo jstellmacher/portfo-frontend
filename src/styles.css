@@ -67,12 +67,12 @@
 
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 4px;
+  height: 4px;
   background: white;
-  border-radius: 50%;
+  border-radius: 60%;
   box-shadow: 0 0 6px 2px white;
-  animation: twinkle 4s infinite ease-in-out;
+  animation: twinkle 6s infinite ease-in-out;
 }
 
 @keyframes twinkle {
