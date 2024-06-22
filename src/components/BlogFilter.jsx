@@ -3,9 +3,9 @@ import React from 'react';
 
 const BlogFilter = ({ tags, activeTag, setActiveTag, filterPosts }) => {
   return (
-    <div className="mb-8 overflow-x-auto">
+    <div className="mb-8">
       <h2 className="text-2xl font-bold mb-4 text-gray-900">Filter by Tags</h2>
-      <div className="flex space-x-4">
+      <div className="flex space-x-4 overflow-x-auto">
         {tags.map((tag) => (
           <button
             key={tag}

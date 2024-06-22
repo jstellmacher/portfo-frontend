@@ -1,10 +1,8 @@
-// pages/ProjectsPage.jsx
 import React, { useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
-import Filter from '../components/Filter';
+import ProjectFilter from '../components/ProjectFilter';
 
 const ProjectsPage = () => {
-  // Dummy project data (replace with real data from server later)
   const projects = [
     {
       id: 1,
@@ -83,16 +81,30 @@ const ProjectsPage = () => {
     );
   };
 
-  const filteredProjects = projects.filter((project) =>
-    selectedTags.length === 0
-      ? true
-      : project.tags.some((tag) => selectedTags.includes(tag))
-  );
+  const handleClearTags = () => {
+    setSelectedTags([]); // Set selectedTags to an empty array
+  };
+
+  // Filter projects based on selected tags
+  const filteredProjects = projects.filter((project) => {
+    if (selectedTags.length === 0) {
+      return true; // Show all projects if no tags are selected
+    } else if (selectedTags === null) {
+      return false; // Explicitly handle null case if needed
+    } else {
+      return project.tags.some((tag) => selectedTags.includes(tag));
+    }
+  });
 
   return (
     <div className="mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg">
       <h2 className="text-3xl font-bold mb-8 text-black">Projects</h2>
-      <Filter tags={allTags} selectedTags={selectedTags} onTagClick={handleTagClick} />
+      <ProjectFilter
+        tags={allTags}
+        selectedTags={selectedTags}
+        onTagClick={handleTagClick}
+        onClearTags={handleClearTags} // Pass handleClearTags function
+      />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (
           <ProjectCard
