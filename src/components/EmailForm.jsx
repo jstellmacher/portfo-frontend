@@ -17,7 +17,7 @@ const EmailForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6">
+    <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-6 transform transition-transform duration-500 max-w-screen-md min-h-[60vh] mx-auto bg-clip-padding bg-opacity-80 border-gray-800">
       <h2 className="text-2xl font-semibold mb-4">Send me a message</h2>
       <div className="mb-4">
         <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Your Name</label>

@@ -3,8 +3,8 @@ import React from 'react';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 
 const GetInTouch = () => (
-  <div id="contact-information" className="mt-12">
-    <div className="bg-blue-100 p-6 rounded-lg shadow-md text-center">
+  <div id="contact-information" className="">
+    <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
       <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
       <p className="text-lg mb-4">Interested in discussing technology solutions or exploring potential collaborations?</p>
       <a href="https://www.linkedin.com/in/jaichuang-stellmacher" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mb-2 flex items-center justify-center">

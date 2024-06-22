@@ -25,7 +25,7 @@ const FilteredInterests = ({ interests, setActiveInterest, activeInterest, inter
         activeInterest={activeInterest} 
       />
     </div>
-    <div id="active-interest-examples" className="mt-12">
+    <div id="active-interest-examples" className="mt-12 mb-12">
       <h3 className="text-xl font-semibold mb-4">{activeInterest} Examples</h3>
       <ul className="flex flex-wrap gap-2">
         {interestExamples[activeInterest].map((example, index) => (
