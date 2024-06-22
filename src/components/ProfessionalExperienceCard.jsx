@@ -68,7 +68,7 @@ const ProfessionalExperienceCard = ({ isAdmin }) => {
   ];
 
   return (
-    <div className="bg-gray-100 rounded-lg shadow-md p-6 h-96 overflow-y-auto">
+    <div className="bg-gray-100 rounded-lg shadow-md p-6 max-h-[60vh] overflow-y-auto">
       <h3 className="text-xl font-semibold mb-2">Professional Experience</h3>
       <p className="text-red-600 text-sm text-center mb-4">
         Scroll down to explore more experiences

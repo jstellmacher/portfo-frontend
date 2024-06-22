@@ -6,7 +6,7 @@ import Nav from './Nav'; // Import the Nav component
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen bg-red-900">
       <FuturisticBackdrop />
       <Header />
       <div className="relative z-10 flex-grow flex">

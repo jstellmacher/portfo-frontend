@@ -8,14 +8,14 @@ const generateStars = (numStars) => {
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
       animationDelay: `${Math.random() * 10}s`,
-      animationDuration: `${2 + Math.random() * 2}s`,
+      animationDuration: `${3 + Math.random() * 3}s`,
     };
     stars.push(<div key={i} className="star" style={style}></div>);
   }
   return stars;
 };
 
-const StarryBackground = ({ numStars = 100 }) => {
+const StarryBackground = ({ numStars = 200 }) => {
   return <div className="stars-container">{generateStars(numStars)}</div>;
 };
 
