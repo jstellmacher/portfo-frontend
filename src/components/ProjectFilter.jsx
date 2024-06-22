@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectFilter = ({ tags, selectedTags, onTagClick, onClearTags }) => {
   return (
-    <div className="mb-8">
+    <div className="">
       <h3 className="text-2xl font-bold mb-4 text-gray-900">Filter by Tags</h3>
       <div className="flex space-x-4 overflow-x-auto">
         {tags.map((tag) => (
@@ -18,7 +18,7 @@ const ProjectFilter = ({ tags, selectedTags, onTagClick, onClearTags }) => {
         ))}
         <button
           className="px-4 py-2 rounded-md bg-red-200 text-gray-800 focus:outline-none hover:bg-red-300"
-          onClick={onClearTags} // Use onClearTags function
+          onClick={onClearTags} 
         >
           Clear
         </button>
