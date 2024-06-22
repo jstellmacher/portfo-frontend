@@ -38,7 +38,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white p-4 min-h-full fixed">
+    <nav className="bg-gray-900 bg-opacity-85 text-white p-4 min-h-full fixed">
       <ul className="flex flex-col space-y-4">
         <li>
           <NavLink exact to="/" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Home</NavLink>
