@@ -55,6 +55,10 @@ const Nav = () => {
         <li>
           <NavLink to="/contact" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Contact</NavLink>
         </li>
+        <li>
+          <NavLink to="/learned" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Learned</NavLink>
+        </li>
+
         {isAdmin ? (
           <li>
             <button onClick={handleLogout} className="hover:bg-blue-500 px-3 py-2 rounded">Logout</button>
