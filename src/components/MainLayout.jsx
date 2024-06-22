@@ -1,4 +1,3 @@
-// MainLayout.jsx
 import React from 'react';
 import FuturisticBackdrop from './FuturisticBackdrop';
 import Header from './Header';
@@ -9,16 +8,14 @@ const MainLayout = ({ children }) => {
   return (
     <div className="relative flex flex-col min-h-screen">
       <FuturisticBackdrop />
-      <div className="relative z-10 flex flex-col flex-grow">
-        <Header />
-        <div className="flex flex-grow"> {/* Container for both the Nav and the main content */}
-          <Nav /> {/* Include the Nav component */}
-          <div className="flex-grow p-4 overflow-auto"> {/* Adjusted main container with overflow-auto */}
-            {children}
-          </div>
-        </div>
-        <Footer />
+      <Header />
+      <div className="relative z-10 flex-grow flex">
+        <Nav className="bg-gray-900 text-white p-4 min-h-full fixed w-64 top-0 z-50" />
+        <main className="flex-grow p-4 overflow-auto">
+          {children}
+        </main>
       </div>
+      <Footer />
     </div>
   );
 }

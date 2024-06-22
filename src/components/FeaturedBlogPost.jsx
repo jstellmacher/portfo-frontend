@@ -1,4 +1,3 @@
-// FeaturedBlogPost.jsx
 import React from "react";
 
 const FeaturedBlogPost = ({ title, date, description, imageUrl }) => {
@@ -8,14 +7,14 @@ const FeaturedBlogPost = ({ title, date, description, imageUrl }) => {
         <img
           src={imageUrl}
           alt={title}
-          className="object-cover h-60 lg:h-auto w-full"
+          className="object-cover h-48 lg:h-48 w-full" // Adjusted image height
         />
       </div>
       <div className="p-6 w-full lg:w-2/3 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold mb-2 text-gray-900">{title}</h2>
-          <p className="text-gray-500 mb-4">{date}</p>
-          <p className="text-gray-700 leading-relaxed">{description}</p>
+          <h2 className="text-xl lg:text-2xl font-semibold mb-2 text-gray-900">{title}</h2> {/* Adjusted text size */}
+          <p className="text-gray-500 mb-2">{date}</p> {/* Reduced bottom margin */}
+          <p className="text-gray-700 leading-snug lg:leading-relaxed line-clamp-3">{description}</p> {/* Added line-clamp for description */}
         </div>
       </div>
     </div>

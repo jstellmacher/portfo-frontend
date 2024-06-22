@@ -1,6 +1,5 @@
-// Nav.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../components/AuthContext';
 
 const Nav = () => {
@@ -8,7 +7,7 @@ const Nav = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const [showLoginForm, setShowLoginForm] = useState(false); // State to toggle login form visibility
+  const [showLoginForm, setShowLoginForm] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -16,7 +15,7 @@ const Nav = () => {
       login(username, password);
       setUsername('');
       setPassword('');
-      setShowLoginForm(false); // Hide the login form after successful login
+      setShowLoginForm(false);
     } catch (error) {
       setError(error.message);
     }
@@ -35,28 +34,27 @@ const Nav = () => {
   };
 
   const toggleLoginForm = () => {
-    setShowLoginForm(!showLoginForm); // Toggle login form visibility
+    setShowLoginForm(!showLoginForm);
   };
 
   return (
-    <nav className="bg-gray-900 text-white p-4 min-h-full"> {/* Ensure it takes up the full height */}
+    <nav className="bg-gray-900 text-white p-4 min-h-full fixed">
       <ul className="flex flex-col space-y-4">
         <li>
-          <Link to="/" className="hover:bg-blue-500 px-3 py-2 rounded">Home</Link>
+          <NavLink exact to="/" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Home</NavLink>
         </li>
         <li>
-          <Link to="/about" className="hover:bg-blue-500 px-3 py-2 rounded">About</Link>
+          <NavLink to="/about" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">About</NavLink>
         </li>
         <li>
-          <Link to="/projects" className="hover:bg-blue-500 px-3 py-2 rounded">Projects</Link>
+          <NavLink to="/projects" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Projects</NavLink>
         </li>
         <li>
-          <Link to="/blog" className="hover:bg-blue-500 px-3 py-2 rounded">Blog</Link>
+          <NavLink to="/blog" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Blog</NavLink>
         </li>
         <li>
-          <Link to="/contact" className="hover:bg-blue-500 px-3 py-2 rounded">Contact</Link>
+          <NavLink to="/contact" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Contact</NavLink>
         </li>
-        {/* Conditional rendering based on isAdmin state */}
         {isAdmin ? (
           <li>
             <button onClick={handleLogout} className="hover:bg-blue-500 px-3 py-2 rounded">Logout</button>
