@@ -21,8 +21,8 @@ function App() {
           <Route path="/about" element={<MainLayout><PortfolioCard><About /></PortfolioCard></MainLayout>} />
           <Route path="/projects" element={<MainLayout><PortfolioCard><Projects /></PortfolioCard></MainLayout>} />
           <Route path="/blog" element={<MainLayout><BlogLayout><Blog /></BlogLayout></MainLayout>} />
-          <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} /> {/* Add route for Contact */}
-          <Route path="/learned" element={<MainLayout><Learned /></MainLayout>} /> 
+          <Route path="/contact" element={<MainLayout><PortfolioCard><Contact /></PortfolioCard></MainLayout>} /> {/* Add route for Contact */}
+          <Route path="/learned" element={<MainLayout><PortfolioCard><Learned /></PortfolioCard></MainLayout>} /> 
         </Routes>
       </AuthProvider>
     </Router>

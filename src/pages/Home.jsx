@@ -25,7 +25,7 @@ const Home = () => {
     <div className="mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg">
       <ProfilePicture imageUrl={imageUrl} alt="Profile Picture" isAdmin={isAdmin} />
       <div className="mt-8">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 bg-gray-100 p-1 rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900">Welcome to My Portfolio</h2>
           <a
             href="https://docs.google.com/document/d/1VLkC0Zy2qz4mmUR__-OPIQ1Gn7AhhFv5b41P0xn1PIc/edit?usp=sharing"
