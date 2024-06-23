@@ -38,7 +38,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-blue-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-30 border-r-2 border-gray-500 text-white p-4 min-h-full fixed">
+    <nav className="bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border-r-1 shadow-2xl shadow-gray-500 rounded-r-xl border-opacity-20 text-white p-4 min-h-full fixed">
       <ul className="flex flex-col space-y-4">
         <li>
           <NavLink exact to="/" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Home</NavLink>

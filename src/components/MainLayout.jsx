@@ -2,7 +2,7 @@ import React from 'react';
 import FuturisticBackdrop from './FuturisticBackdrop';
 import Header from './Header';
 import Footer from './Footer';
-import Nav from './Nav'; // Import the Nav component
+import Nav from './Nav';
 
 const MainLayout = ({ children }) => {
   return (
@@ -15,7 +15,7 @@ const MainLayout = ({ children }) => {
           {children}
         </main>
       </div>
-      <Footer />
+      <Footer className=""/>
     </div>
   );
 }
