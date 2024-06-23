@@ -3,7 +3,15 @@ import React from 'react';
 const ProjectFilter = ({ tags, selectedTags, onTagClick, onClearTags }) => {
   return (
     <div className="">
-      <h3 className="text-2xl font-bold mb-4 text-gray-900">Filter by Tags</h3>
+      <div className="flex items-center mb-4">
+      <h3 className="text-2xl font-bold text-gray-900">Filter by Tags</h3>
+      <button
+          className="ml-4 px-4 py-2 rounded-md bg-red-200 text-gray-800 focus:outline-none hover:bg-red-500"
+          onClick={onClearTags} 
+        >
+          Clear
+        </button>
+      </div>
       <div className="flex space-x-4 overflow-x-auto">
         {tags.map((tag) => (
           <button
@@ -16,12 +24,7 @@ const ProjectFilter = ({ tags, selectedTags, onTagClick, onClearTags }) => {
             {tag}
           </button>
         ))}
-        <button
-          className="px-4 py-2 rounded-md bg-red-200 text-gray-800 focus:outline-none hover:bg-red-300"
-          onClick={onClearTags} 
-        >
-          Clear
-        </button>
+       
       </div>
     </div>
   );

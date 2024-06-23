@@ -109,7 +109,7 @@ const Learned = () => {
 
   return (
     <div className="mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg ">
-      <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center bg-white rounded-lg p-6">
+      <h1 className="text-4xl font-bold mb-8 text-gray-900 text-center bg-gray-100 rounded-lg p-6">
         The Things I Have Learned
       </h1>
 
@@ -146,7 +146,7 @@ const Learned = () => {
               />
             )}
           </div>
-          <div className="w-full sm:w-3/4 bg-gray-200 p-6 rounded-lg shadow-md">
+          <div className="w-full sm:w-3/4 bg-gray-100 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-4">{activeSubfolder}</h2>
             <ul>
               {courseDetails
