@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "Title": "Self Learning Course 1",
+      "Tag": "Self Learning",
+      "Definition": "Definition of Self Learning Course 1",
+      "Technologies": ["Tech G", "Tech H"]
+    },
+    {
+      "id": 2,
+      "Title": "Self Learning Course 2",
+      "Tag": "Self Learning",
+      "Definition": "Definition of Self Learning Course 2",
+      "Technologies": ["Tech I", "Tech J"]
+    },
+    {
+      "id": 3,
+      "Title": "Self Learning Course 3",
+      "Tag": "Self Learning",
+      "Definition": "Definition of Self Learning Course 3",
+      "Technologies": ["Tech K", "Tech L"]
+    }
+  ]
+  

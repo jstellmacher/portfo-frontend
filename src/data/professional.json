@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "Title": "Professional Course 1",
+      "Tag": "Professional",
+      "Definition": "Definition of Professional Course 1",
+      "Technologies": ["Tech A", "Tech B"]
+    },
+    {
+      "id": 2,
+      "Title": "Professional Course 2",
+      "Tag": "Professional",
+      "Definition": "Definition of Professional Course 2",
+      "Technologies": ["Tech C", "Tech D"]
+    },
+    {
+      "id": 3,
+      "Title": "Professional Course 3",
+      "Tag": "Professional",
+      "Definition": "Definition of Professional Course 3",
+      "Technologies": ["Tech E", "Tech F"]
+    }
+  ]
+  

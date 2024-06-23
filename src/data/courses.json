@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "Title": "Intro Enterprise Computer Environments",
+    "Tag": "MIS",
+    "Definition": "Introduction to fundamental concepts and environments in enterprise computer systems.",
+    "Technologies": ["AWS", "Azure", "Google Cloud"]
+  },
+  {
+    "id": 2,
+    "Title": "Info System Analysis+Design",
+    "Tag": "MIS",
+    "Definition": "Study of methods and techniques for analyzing and designing information systems.",
+    "Technologies": ["UML", "ER Diagrams", "Prototyping"]
+  },
+  {
+    "id": 3,
+    "Title": "Business Data Communications",
+    "Tag": "MIS",
+    "Definition": "Principles and practices of data communications in business environments.",
+    "Technologies": ["Networking", "TCP/IP", "LAN/WAN"]
+  },
+  {
+    "id": 4,
+    "Title": "Digital Marketing",
+    "Tag": "Marketing",
+    "Definition": "Strategies and techniques for marketing products and services using digital channels.",
+    "Technologies": ["SEO", "PPC", "Social Media Marketing"]
+  },
+  {
+    "id": 5,
+    "Title": "Product Innovation",
+    "Tag": "Marketing",
+    "Definition": "Processes and methods for creating and launching innovative products.",
+    "Technologies": ["Design Thinking", "Prototyping", "Market Research"]
+  },
+  {
+    "id": 6,
+    "Title": "Mktg Policies+Operations",
+    "Tag": "Marketing",
+    "Definition": "Policies and operational strategies in marketing management.",
+    "Technologies": ["Market Segmentation", "Campaign Management"]
+  },
+  {
+    "id": 7,
+    "Title": "Data Structure+Algorithm",
+    "Tag": "MIS",
+    "Definition": "Fundamental data structures and algorithms for efficient software development.",
+    "Technologies": ["Big O Notation", "Data Structures", "Algorithm Analysis"]
+  },
+  {
+    "id": 8,
+    "Title": "Database Management Systems",
+    "Tag": "MIS",
+    "Definition": "Design, implementation, and management of database systems.",
+    "Technologies": ["SQL", "NoSQL", "Database Optimization"]
+  },
+  {
+    "id": 9,
+    "Title": "Data Analytics",
+    "Tag": "MIS",
+    "Definition": "Methods and tools for analyzing large datasets to extract meaningful insights.",
+    "Technologies": ["Python", "R", "Tableau"]
+  },
+  {
+    "id": 10,
+    "Title": "Mktg Research for Decision Making",
+    "Tag": "Marketing",
+    "Definition": "Research methods and analysis techniques for marketing decision-making.",
+    "Technologies": ["Surveys", "Statistical Analysis", "Qualitative Research"]
+  },
+  {
+    "id": 11,
+    "Title": "Consumer Behavior",
+    "Tag": "Marketing",
+    "Definition": "Study of consumer decision-making processes and behaviors.",
+    "Technologies": ["Market Research", "Consumer Surveys"]
+  },
+  {
+    "id": 12,
+    "Title": "Intrgrt Bus Fnd w/Ethics",
+    "Tag": "Management",
+    "Definition": "Integration of foundational business principles with ethical considerations.",
+    "Technologies": []
+  },
+  {
+    "id": 13,
+    "Title": "UA Study Abroad Track",
+    "Tag": "Other",
+    "Definition": "Study abroad program focused on international academic and cultural experiences.",
+    "Technologies": []
+  },
+  {
+    "id": 14,
+    "Title": "Innovating:Creating the Future",
+    "Tag": "Other",
+    "Definition": "Course exploring innovation processes and creativity in business and technology.",
+    "Technologies": ["Design Thinking", "Prototyping"]
+  },
+  {
+    "id": 15,
+    "Title": "Use+Managing Info System",
+    "Tag": "MIS",
+    "Definition": "Practical applications and management of information systems in organizations.",
+    "Technologies": ["ERP Systems", "CRM Systems"]
+  },
+  {
+    "id": 16,
+    "Title": "Medical Ethics",
+    "Tag": "Other",
+    "Definition": "Ethical considerations and dilemmas in medical practices and policies.",
+    "Technologies": []
+  },
+  {
+    "id": 17,
+    "Title": "Business Communication",
+    "Tag": "Other",
+    "Definition": "Effective communication strategies and practices in business environments.",
+    "Technologies": []
+  },
+  {
+    "id": 18,
+    "Title": "Intro to Finance",
+    "Tag": "Other",
+    "Definition": "Basic concepts and principles in financial management and analysis.",
+    "Technologies": []
+  },
+  {
+    "id": 19,
+    "Title": "Org Behavior+Management",
+    "Tag": "Management",
+    "Definition": "Study of organizational behavior and management theories and practices.",
+    "Technologies": ["Leadership Models", "Organizational Culture"]
+  },
+  {
+    "id": 20,
+    "Title": "Intro to Marketing",
+    "Tag": "Marketing",
+    "Definition": "Fundamental principles and strategies in marketing.",
+    "Technologies": ["Market Analysis", "Marketing Mix"]
+  },
+  {
+    "id": 21,
+    "Title": "Marketing Analytics",
+    "Tag": "Marketing",
+    "Definition": "Application of data analysis techniques to marketing strategies and campaigns.",
+    "Technologies": ["Analytics Platforms", "Customer Segmentation"]
+  },
+  {
+    "id": 22,
+    "Title": "Intro to Managerial Acct",
+    "Tag": "Other",
+    "Definition": "Introduction to managerial accounting principles and practices.",
+    "Technologies": []
+  },
+  {
+    "id": 23,
+    "Title": "Fundamentals of Bus Comm",
+    "Tag": "Other",
+    "Definition": "Basic principles and practices of business communication.",
+    "Technologies": []
+  },
+  {
+    "id": 24,
+    "Title": "Analytic Methods for Business",
+    "Tag": "Other",
+    "Definition": "Methods and techniques for quantitative analysis in business decision-making.",
+    "Technologies": ["Statistical Software", "Quantitative Analysis"]
+  },
+  {
+    "id": 25,
+    "Title": "Health and Language",
+    "Tag": "Other",
+    "Definition": "Study of health-related issues and language communication in healthcare.",
+    "Technologies": []
+  },
+  {
+    "id": 26,
+    "Title": "Intro to Financial Acct",
+    "Tag": "Other",
+    "Definition": "Introduction to financial accounting principles and practices.",
+    "Technologies": []
+  },
+  {
+    "id": 27,
+    "Title": "Univ+Hum:Origin+Destiny",
+    "Tag": "Other",
+    "Definition": "Exploration of the origins and destinies in humanities and university studies.",
+    "Technologies": []
+  },
+  {
+    "id": 28,
+    "Title": "Statistic Inference in Mngmt",
+    "Tag": "Other",
+    "Definition": "Application of statistical inference methods in management decision-making.",
+    "Technologies": ["Statistical Software", "Hypothesis Testing"]
+  },
+  {
+    "id": 29,
+    "Title": "PHIL Lower Division Transfer",
+    "Tag": "Other",
+    "Definition": "Lower division transfer course in philosophy.",
+    "Technologies": []
+  },
+  {
+    "id": 30,
+    "Title": "Second Semester Spanish",
+    "Tag": "Other",
+    "Definition": "Continuation of Spanish language study from the first semester.",
+    "Technologies": []
+  },
+  {
+    "id": 31,
+    "Title": "SPAN Lower Division Transfer",
+    "Tag": "Other",
+    "Definition": "Lower division transfer course in Spanish language.",
+    "Technologies": []
+  },
+  {
+    "id": 32,
+    "Title": "Spanish Placement 2nd Semest",
+    "Tag": "Other",
+    "Definition": "Placement course for second semester Spanish language students.",
+    "Technologies": []
+  }
+]
