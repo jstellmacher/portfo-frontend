@@ -107,17 +107,17 @@ const ProjectsPage = () => {
 
   return (
     <div className="mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-screen-lg">
-      <div className="bg-gray-100 rounded-lg p-4">
+      <div className="bg-gray-100 rounded-lg p-4 mb-4">
       <h2 className="text-3xl font-bold mb-4 text-black">Projects</h2>
       <ProjectFilter
         tags={allTags}
         selectedTags={selectedTags}
         onTagClick={handleTagClick}
         onClearTags={handleClearTags} // Pass handleClearTags function
-      /></div>
-      <p className="text-red-600 text-sm text-center m-2">
+      /><p className="text-red-600 bg-gray-100 rounded-lg text-sm text-center mt-4">
         Scroll Down For More Projects
-      </p>
+      </p></div>
+      
       <div className="overflow-y-auto max-h-[60vh] rounded-lg">
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
