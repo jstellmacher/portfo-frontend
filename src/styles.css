@@ -94,14 +94,23 @@
   .nav-menu-button {
     display: block;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem; /* Adjust the distance from the top */
+    right: 1.5rem; /* Adjust the distance from the right */
     z-index: 1100; /* Ensure the button is always on top */
     background-color: transparent;
     border: none;
     color: white;
     cursor: pointer;
+    font-size: 2rem; /* Increase icon size */
+    padding: 0.5rem; /* Add padding for better click area */
   }
+
+  .nav-menu-button svg {
+    width: 2rem; /* Increase icon width */
+    height: 2rem; /* Increase icon height */
+  }
+
+
 
   .collapsible-nav {
     width: 250px; /* Adjust width as needed */
