@@ -87,3 +87,110 @@
 .active {
   @apply px-3 py-2 bg-blue-500;
 }
+/* styles.css */
+
+/* Hide original nav on smaller screens when collapsible nav is open */
+@media (max-width: 1024px) {
+  .nav-menu-button {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100; /* Ensure the button is always on top */
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .collapsible-nav {
+    width: 250px; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide off-screen by default */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .collapsible-nav.open {
+    left: 0; /* Slide in from the left */
+  }
+
+  .collapsible-nav .nav-container {
+    padding: 2rem; /* Add padding for better spacing */
+  }
+
+  /* Ensure original nav is hidden on smaller screens */
+  .nav {
+    display: none;
+  }
+
+  /* Hide original nav when collapsible nav is open */
+  body.nav-open .nav {
+    display: none;
+  }
+
+  .collapsible-nav ul {
+    margin-top: 4rem; /* Adjust margin for better positioning */
+  }
+
+  .collapsible-nav ul li a, .collapsible-nav ul li button {
+    color: white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .collapsible-nav ul li a:hover, .collapsible-nav ul li button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .collapsible-nav form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .collapsible-nav input {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .collapsible-nav input::placeholder {
+    color: white;
+  }
+
+  .collapsible-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+}
+
+/* Show original nav on larger screens */
+@media (min-width: 1024px) {
+  .collapsible-nav {
+    display: none; /* Hide collapsible nav on larger screens */
+  }
+.nav-menu-button{
+  display: none;
+}
+  .nav {
+    display: block;
+  }
+}
+/* styles.css */
+@media (max-width: 1023px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+

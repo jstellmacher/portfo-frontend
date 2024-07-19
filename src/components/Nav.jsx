@@ -2,7 +2,18 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../components/AuthContext';
 
-const Nav = () => {
+// Define Tailwind CSS style constants
+const navStyles = `bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border-r-1 shadow-2xl shadow-gray-500 rounded-r-xl border-opacity-20 text-white p-4 min-h-full fixed hide-on-small`;
+
+const hiddenNavStyles = `hidden lg:block`;
+const linkStyles = `hover:bg-blue-500 px-3 py-2 rounded`;
+const activeLinkStyles = `bg-blue-500`;
+const formStyles = `flex flex-col space-y-2 mt-2`;
+const inputStyles = `px-3 py-2 rounded`;
+const errorStyles = `text-red-500`;
+const buttonStyles = `hover:bg-blue-500 px-3 py-2 rounded`;
+
+const Nav = ({ isHidden }) => {
   const { isAdmin, login, logout } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -38,47 +49,47 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 border-r-1 shadow-2xl shadow-gray-500 rounded-r-xl border-opacity-20 text-white p-4 min-h-full fixed">
+    <nav className={`${navStyles} ${isHidden ? hiddenNavStyles : ''}`}>
       <ul className="flex flex-col space-y-4">
         <li>
-          <NavLink exact to="/" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Home</NavLink>
+          <NavLink exact to="/" activeClassName={activeLinkStyles} className={linkStyles}>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/about" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">About</NavLink>
+          <NavLink to="/about" activeClassName={activeLinkStyles} className={linkStyles}>About</NavLink>
         </li>
         <li>
-          <NavLink to="/projects" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Projects</NavLink>
+          <NavLink to="/projects" activeClassName={activeLinkStyles} className={linkStyles}>Projects</NavLink>
         </li>
         <li>
-          <NavLink to="/blog" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Blog</NavLink>
+          <NavLink to="/blog" activeClassName={activeLinkStyles} className={linkStyles}>Blog</NavLink>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Contact</NavLink>
+          <NavLink to="/contact" activeClassName={activeLinkStyles} className={linkStyles}>Contact</NavLink>
         </li>
         <li>
-          <NavLink to="/learned" activeClassName="bg-blue-500" className="hover:bg-blue-500 px-3 py-2 rounded">Learned</NavLink>
+          <NavLink to="/learned" activeClassName={activeLinkStyles} className={linkStyles}>Learned</NavLink>
         </li>
 
         {isAdmin ? (
           <li>
-            <button onClick={handleLogout} className="hover:bg-blue-500 px-3 py-2 rounded">Logout</button>
+            <button onClick={handleLogout} className={buttonStyles}>Logout</button>
           </li>
         ) : (
           <li>
-            <button onClick={toggleLoginForm} className="hover:bg-blue-500 px-3 py-2 rounded">Login</button>
+            <button onClick={toggleLoginForm} className={buttonStyles}>Login</button>
             {showLoginForm && (
-              <form onSubmit={handleLogin} className="flex flex-col space-y-2 mt-2">
-                <input type="text" placeholder="Username" value={username} onChange={handleUsernameChange} className="px-3 py-2 rounded" />
-                <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} className="px-3 py-2 rounded" />
-                <button type="submit" className="hover:bg-blue-500 px-3 py-2 rounded">Submit</button>
+              <form onSubmit={handleLogin} className={formStyles}>
+                <input type="text" placeholder="Username" value={username} onChange={handleUsernameChange} className={inputStyles} />
+                <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} className={inputStyles} />
+                <button type="submit" className={buttonStyles}>Submit</button>
               </form>
             )}
-            {error && <p className="text-red-500">{error}</p>}
+            {error && <p className={errorStyles}>{error}</p>}
           </li>
         )}
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;
