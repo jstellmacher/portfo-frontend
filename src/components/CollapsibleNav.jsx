@@ -12,7 +12,8 @@ const CollapsibleNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Style constants
-  const navButtonStyles = `fixed top-4 right-4 z-50 bg-transparent border-none text-white cursor-pointer text-3xl p-3`;
+  const navButtonStyles = `fixed top-4 right-4 z-50 bg-transparent border-none text-white cursor-pointer text-3xl p-3 lg:hidden`;
+
   const navContainerStyles = `flex flex-col p-4 space-y-4 bg-white bg-opacity-30 backdrop-blur-md border border-white border-opacity-20 rounded-lg shadow-lg text-white`;
   const navItemStyles = `block px-4 py-2 rounded-lg hover:bg-blue-500`;
   const activeLinkStyles = `bg-blue-500 text-white`;
