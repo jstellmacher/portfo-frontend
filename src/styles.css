@@ -1,8 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* styles.css */
+.custom-input {
+  color: black !important;
+  background-color: white !important;
+}
+
 .card-3d {
   perspective: 1000px;
 }
@@ -110,8 +114,6 @@
     height: 2rem; /* Increase icon height */
   }
 
-
-
   .collapsible-nav {
     width: 250px; /* Adjust width as needed */
     position: fixed;
@@ -145,7 +147,8 @@
     margin-top: 4rem; /* Adjust margin for better positioning */
   }
 
-  .collapsible-nav ul li a, .collapsible-nav ul li button {
+  .collapsible-nav ul li a,
+  .collapsible-nav ul li button {
     color: white;
     background-color: transparent;
     padding: 0.5rem 1rem;
@@ -156,7 +159,8 @@
     transition: background-color 0.3s ease-in-out;
   }
 
-  .collapsible-nav ul li a:hover, .collapsible-nav ul li button:hover {
+  .collapsible-nav ul li a:hover,
+  .collapsible-nav ul li button:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
 
@@ -189,9 +193,9 @@
   .collapsible-nav {
     display: none; /* Hide collapsible nav on larger screens */
   }
-.nav-menu-button{
-  display: none;
-}
+  .nav-menu-button {
+    display: none;
+  }
   .nav {
     display: block;
   }
@@ -202,4 +206,3 @@
     display: none;
   }
 }
-
