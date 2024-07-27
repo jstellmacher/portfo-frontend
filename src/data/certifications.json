@@ -1,0 +1,7 @@
+[
+    { "id": 1, "title": "Flatiron Full Stack Software Engineering", "icon": "FaCertificate" },
+    { "id": 2, "title": "PS Principals Implementation Consultant 1 Certification", "icon": "FaChalkboardTeacher" },
+    { "id": 3, "title": "Python for Data Science, AI, & Development (IBM Coursera)", "icon": "FaPython" },
+    { "id": 4, "title": "Microsoft Azure Fundamentals", "icon": "FaCloud" }
+  ]
+  

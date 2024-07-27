@@ -7,15 +7,14 @@ const generateStars = (numStars) => {
     const style = {
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      animationDelay: `${Math.random() * 10}s`,
-      animationDuration: `${3 + Math.random() * 3}s`,
+      // Remove animations if not necessary
     };
     stars.push(<div key={i} className="star" style={style}></div>);
   }
   return stars;
 };
 
-const StarryBackground = ({ numStars = 200 }) => {
+const StarryBackground = ({ numStars = 100 }) => {
   return <div className="stars-container">{generateStars(numStars)}</div>;
 };
 
